@@ -1,0 +1,38 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+
+# Build output (if applicable, e.g., if you use a build tool like Webpack or TypeScript)
+dist/
+build/
+
+# Environment variables
+.env
+*.env
+
+# Local configuration files
+config/local.json
+config/development.json
+
+# Logs
+logs/
+*.log
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Database-related files (if not using environment variables)
+database.db
+*.sqlite3
+
+# Lock files (optional, depending on your workflow)
+package-lock.json
+# Uncomment the line below if you use Yarn instead of npm
+# yarn.lock
