@@ -1,0 +1,204 @@
+/* =================== */
+/* 1. Global Layout Styles */
+/* =================== */
+
+/* Main container: centers the entire app content */
+.app-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0.25rem;
+  background-color: #fff;
+}
+
+/* Wrapper around the table with border, padding, and max-width */
+.table-wrapper {
+  width: 100%;
+  max-width: 115rem;
+  margin: 0 0.25rem;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+/* =================== */
+/* 2. Title and Buttons */
+/* =================== */
+
+/* Centered page title */
+.app-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+/* Button group (Add/Edit/Delete/etc.) - centered */
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 0 0.25rem;
+}
+
+/* Search bar wrapper and input styling */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 0 0.25rem;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 28rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+/* =================== */
+/* 3. DataTable Styling */
+/* =================== */
+
+/* Base styling for PrimeReact DataTable */
+.custom-datatable {
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+/* Center all text inside the DataTable headers and rows */
+.custom-datatable .p-datatable-thead > tr > th,
+.custom-datatable .p-datatable-tbody > tr > td {
+  text-align: center !important;
+  vertical-align: middle !important;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  padding: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 100px;
+}
+
+/* Increase width for known wide columns like city and province */
+.custom-datatable .p-datatable-thead > tr > th:nth-child(8),
+.custom-datatable .p-datatable-tbody > tr > td:nth-child(8),
+.custom-datatable .p-datatable-thead > tr > th:nth-child(9),
+.custom-datatable .p-datatable-tbody > tr > td:nth-child(9) {
+  min-width: 150px;
+}
+
+/* Fix selection column width */
+.custom-datatable .p-datatable-thead > tr > th.p-selection-column,
+.custom-datatable .p-datatable-tbody > tr > td.p-selection-column {
+  width: 3rem !important;
+  min-width: 3rem !important;
+}
+
+/* Hide sort icons in PrimeReact DataTable headers */
+.p-sortable-column-icon {
+  display: none !important;
+}
+
+/* =================== */
+/* 4. Dialog and Card Styling */
+/* =================== */
+
+/* Style for employee view dialog */
+.employee-dialog {
+  width: 70vw;
+}
+
+/* Center text inside employee details cards */
+.employee-dialog .p-card-content p {
+  text-align: center;
+}
+
+/* Optional spacing between card fields */
+.employee-dialog .p-card-content p {
+  margin: 0.5rem 0;
+}
+
+/* =================== */
+/* 5. Additional UI Elements */
+/* =================== */
+
+/* Change log at the bottom of the table */
+.change-log {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  text-align: center;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  background-color: #ffffff;
+}
+
+/* =================== */
+/* 6. Responsive Design */
+/* =================== */
+
+@media (max-width: 1400px) {
+  .table-wrapper {
+    max-width: 100%;
+  }
+  .custom-datatable {
+    font-size: 0.9rem;
+  }
+  .custom-datatable {
+    overflow-x: auto;
+  }
+  .custom-datatable .p-datatable-thead > tr > th,
+  .custom-datatable .p-datatable-tbody > tr > td {
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 960px) {
+  .employee-dialog {
+    width: 75vw;
+  }
+  .button-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .search-input {
+    max-width: 20rem;
+  }
+  .custom-datatable .p-datatable-thead > tr > th,
+  .custom-datatable .p-datatable-tbody > tr > td {
+    min-width: 60px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .employee-dialog {
+    width: 90vw;
+  }
+  .app-title {
+    font-size: 1.2rem;
+  }
+  .button-group {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .search-input {
+    max-width: 15rem;
+  }
+  .custom-datatable {
+    font-size: 0.8rem;
+  }
+  .change-log {
+    font-size: 0.9rem;
+  }
+  .custom-datatable .p-datatable-thead > tr > th,
+  .custom-datatable .p-datatable-tbody > tr > td {
+    min-width: 50px;
+    font-size: 0.75rem;
+  }
+}
